@@ -18935,9 +18935,7 @@ a .h_head:hover {
 .event_about_img .about_bg {
   height: 330px;
   border-radius: 10px;
-  background-image: -moz-linear-gradient(140deg, #fd475d 0%, #0e044b 100%);
-  background-image: -webkit-linear-gradient(140deg, #fd475d 0%, #0e044b 100%);
-  background-image: -ms-linear-gradient(140deg, #fd475d 0%, #0e044b 100%);
+
   position: absolute;
   left: 90px;
   right: -50px;
