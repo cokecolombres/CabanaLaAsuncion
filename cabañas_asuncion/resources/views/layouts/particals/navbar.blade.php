@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+{{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -47,4 +47,44 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+        <header class="header_area">
+            <nav class="navbar navbar-expand-lg menu_one menu_four menu_poss menu_scroll">
+                <div class="container-fluid">
+                    <a class="navbar-brand sticky_logo" style="color: #510202; font-weight: bold;" href="#">CABAÑA <br> LA ASUNCION</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_toggle">
+                            <span class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="hamburger-cross">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav menu w_menu ml-auto">
+                            <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
+                                <a class="nav-link" href="{{url('/')}}">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="dropdown submenu nav-item">
+                                <a title="Pages" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{route('remates')}}">
+                                    Remates
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="nosotros.html" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Nosotros
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
