@@ -23,3 +23,5 @@ Route::get('/nosotros', 'PublicacionController@index')->name('nosotros');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/remates', 'RemateController@list')->name('list-remates');
+Route::get('/home/remates/nuevo', 'RemateController@create')->name('nuevo-remate');

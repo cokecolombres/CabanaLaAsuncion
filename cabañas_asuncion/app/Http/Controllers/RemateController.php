@@ -7,32 +7,25 @@ use Illuminate\Http\Request;
 
 class RemateController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         return view('remates.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function list()
+    {
+        $remates = Remate::orderBy('create_at','desc')->paginate(20);
+        $title = 'Lista de remates';
+        return view('remates.list', compact('remates', 'title'));
+    }
+ 
     public function create()
     {
-        //
+        $title = 'Nuevo remate';
+        return view('remates.create', compact('title'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
