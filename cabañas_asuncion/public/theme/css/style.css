@@ -907,7 +907,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   padding-top: 35px;
 }
 .menu > .nav-item > .nav-link {
-  font: 500 15px "Poppins", sans-serif;
+  font: 500 20px "Poppins", sans-serif;
   color: #510202;
   padding: 0px;
   transition: color 0.3s ease 0s;
