@@ -51,7 +51,7 @@
         <header class="header_area">
             <nav class="navbar navbar-expand-lg menu_one menu_four menu_poss menu_scroll">
                 <div class="container-fluid">
-                    <a class="navbar-brand sticky_logo" style="color: #510202; font-weight: bold;" href="#">CABAÑA <br> LA ASUNCION</a>
+                    <a class="navbar-brand sticky_logo" href="#"><img src="{{asset('theme/img/6-logo/logo2.png')}}" alt="logo" style="max-width: 200px;"><img src="{{asset('theme/img/6-logo/logo2.png')}}" alt="logo" style="max-width: 120px;"></a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_toggle">
                             <span class="hamburger">
@@ -80,7 +80,12 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="{{route('nosotros')}}">
-                                   Sobre nosotros
+                                   Cabaña
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="{{route('nosotros')}}">
+                                   Contacto
                                 </a>
                             </li>
                         </ul>

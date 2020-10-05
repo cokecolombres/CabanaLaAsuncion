@@ -8,7 +8,7 @@
         </div>
     </section>
 
-    <section class="more_feature_area">
+    <section class="more_feature_area mb_40">
         <div class="container">
 
             <br>
@@ -33,18 +33,7 @@
                                 <img class="img-fluid" src="{{asset('theme/img/2-imagenes/2.png')}}">
                                 <small>*Clic para más información</small>
                             </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p><strong>Por informes y consultas:</strong> <br>
-                                        (0381) 421-5400 <br>
-                                        laasuncioncabana@gmail.com
-                                    </p>
-                                </div>
-                            </div>
-                            <br>
                             <div class="card text-center">
-                            <div class="">
-
                                 <div class="sign_info">
                                     <div class="">
                                         <div class=" ">
@@ -58,6 +47,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p><strong>Por informes y consultas:</strong> <br>
+                                        (0381) 421-5400 <br>
+                                        laasuncioncabana@gmail.com
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-8 wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
@@ -100,6 +97,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         
                             <br>
 
@@ -115,27 +113,28 @@
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="lote1" role="tabpanel" aria-labelledby="lote1-tab">
-                                    <h4 class="mt_30 mb_10">
-                                        Lote 1
-                                    </h4>
-                                    <iframe class="embed-responsive" height="400" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="tab-pane fade" id="lote2" role="tabpanel" aria-labelledby="lote2-tab">
-                                    <h4 class="mt_30 mb_10">
-                                        Lote 2
-                                    </h4>
-                                    <iframe class="embed-responsive" height="400" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="tab-pane fade" id="lote3" role="tabpanel" aria-labelledby="lote3-tab">
-                                    <h4 class="mt_30 mb_10">
-                                        Lote 3
-                                    </h4>
-                                    <iframe class="embed-responsive" height="400" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
+                            <div class="tab-pane fade show active" id="lote1" role="tabpanel" aria-labelledby="lote1-tab">
+                                <h4 class="mt_30 mb_10">
+                                    Lote 1
+                                </h4>
+                                <iframe class="embed-responsive" height="420" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="tab-pane fade" id="lote2" role="tabpanel" aria-labelledby="lote2-tab">
+                                <h4 class="mt_30 mb_10">
+                                    Lote 2
+                                </h4>
+                                <iframe class="embed-responsive" height="420" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="tab-pane fade" id="lote3" role="tabpanel" aria-labelledby="lote3-tab">
+                                <h4 class="mt_30 mb_10">
+                                    Lote 3
+                                </h4>
+                                <iframe class="embed-responsive" height="420" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            </div>
+                            
 
-
-                             </div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="descargar" role="tabpanel" aria-labelledby="profile-tab">
@@ -148,7 +147,7 @@
         </div>
     </section>  
 
-    <section class="partner_logo_area_two">
+    {{-- <section class="partner_logo_area_two">
         <div class="container">
 
             <div class="subscribe_form_info s_form_info_two text-center">
@@ -160,7 +159,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     @include('layouts.particals.footer')
 @endsection
