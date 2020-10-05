@@ -14,7 +14,7 @@ class PublicacionController extends Controller
      */
     public function index()
     {
-        //
+        return view('nosotros.index');
     }
 
     /**

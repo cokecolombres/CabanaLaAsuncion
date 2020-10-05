@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/remates', 'RemateController@index')->name('remates');
+Route::get('/nosotros', 'PublicacionController@index')->name('nosotros');
 
 Auth::routes();
 

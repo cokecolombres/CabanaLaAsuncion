@@ -15,6 +15,8 @@ class CreatePublicacionsTable extends Migration
     {
         Schema::create('publicacions', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->string('cuerpo');
             $table->timestamps();
         });
     }
