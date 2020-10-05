@@ -19,7 +19,29 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role',['admin','visita','colaborador'])->default('visita');
+            $table->string('facebook')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('twitter')->nullable();
             $table->rememberToken();
+            $table->timestamps();
+        });
+
+        Schema::create('newsletters', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombres')->nullable();
+            $table->string('email')->nullable();
+            $table->timestamps();
+        });
+
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombres')->nullable();
+            $table->string('email')->nullable();
+            $table->string('asunto')->nullable();
+            $table->text('mensaje')->nullable();
             $table->timestamps();
         });
     }

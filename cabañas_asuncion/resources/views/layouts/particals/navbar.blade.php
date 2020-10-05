@@ -74,13 +74,13 @@
                                 </a>
                             </li>
                             <li class="dropdown submenu nav-item">
-                                <a title="Pages" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{route('remates')}}">
+                                <a class="nav-link" href="{{route('remates')}}">
                                     Remates
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="nosotros.html" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Nosotros
+                                <a class="nav-link" href="{{route('nosotros')}}">
+                                   Sobre nosotros
                                 </a>
                             </li>
                         </ul>
