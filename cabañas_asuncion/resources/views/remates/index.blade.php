@@ -14,13 +14,13 @@
             <br>
             <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#informacion" role="tab" aria-controls="home" aria-selected="true">Información y pre-ofertas</a>
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#informacion" role="tab" aria-controls="home" aria-selected="true"><i class="ti-info"></i> Información y pre-ofertas</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descargar" role="tab" aria-controls="profile" aria-selected="false">Descargar Catálogo</a>
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descargar" role="tab" aria-controls="profile" aria-selected="false"><i class="ti-download"></i> Descargar Catálogo</a>
             </li>
             <li class="nav-item" role="venta">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#venta" role="tab" aria-controls="contact" aria-selected="false">Catálogo</a>
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#venta" role="tab" aria-controls="contact" aria-selected="false"><i class="ti-clipboard"></i> Catálogo</a>
             </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -103,9 +103,39 @@
                         
                             <br>
 
-                            <iframe class="embed-responsive" height="444" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="lote1-tab" data-toggle="tab" href="#lote1" role="tab" aria-controls="home" aria-selected="true">Lote 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lote2-tab" data-toggle="tab" href="#lote2" role="tab" aria-controls="profile" aria-selected="false">Lote 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="lote3-tab" data-toggle="tab" href="#lote3" role="tab" aria-controls="contact" aria-selected="false">Lote 3</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="lote1" role="tabpanel" aria-labelledby="lote1-tab">
+                                    <h4 class="mt_30 mb_10">
+                                        Lote 1
+                                    </h4>
+                                    <iframe class="embed-responsive" height="400" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="tab-pane fade" id="lote2" role="tabpanel" aria-labelledby="lote2-tab">
+                                    <h4 class="mt_30 mb_10">
+                                        Lote 2
+                                    </h4>
+                                    <iframe class="embed-responsive" height="400" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="tab-pane fade" id="lote3" role="tabpanel" aria-labelledby="lote3-tab">
+                                    <h4 class="mt_30 mb_10">
+                                        Lote 3
+                                    </h4>
+                                    <iframe class="embed-responsive" height="400" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
 
-                        </div>
+
+                             </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="descargar" role="tabpanel" aria-labelledby="profile-tab">
