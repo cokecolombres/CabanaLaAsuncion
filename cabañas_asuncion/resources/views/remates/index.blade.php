@@ -3,7 +3,7 @@
     <section class="breadcrumb_area">
         <div class="container">
             <div class="breadcrumb_content text-center">
-                <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">Remates</h1>
+                <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">{{$title}}</h1>
             </div>
         </div>
     </section>
@@ -29,9 +29,11 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <div class="img_pad">
-
+                                @if (!$remate->image)
+                                <img class="img-fluid" src="/imagenes/remate/{{$remate->imagen}}">
+                                @else
                                 <img class="img-fluid" src="{{asset('theme/img/2-imagenes/2.png')}}">
-                                <small>*Clic para más información</small>
+                                @endif
                             </div>
                             <div class="card text-center">
                                 <div class="sign_info">
@@ -62,7 +64,7 @@
 
                             <div class="card">
                                 <div class="card-header">
-                                    40° REMATE ANUAL
+                                    {{ $remate->titulo }}
                                 </div>
                                 <div class="card-body"> 
                                     <div class="table-responsive">
@@ -70,28 +72,30 @@
                                             <tbody>
                                                 <tr>
                                                 <th scope="row">Fecha</th>
-                                                <td>Viernes 07 de Agosto</td>
+                                                <td>{{ $remate->fecha }}</td>
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Hora</th>
-                                                <td>14 hs</td>
+                                                {{--  <td>{{ $remate->hora }}</td>  --}}
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Organiza</th>
-                                                <td colspan="2">Cabaña La Asunción</td>
+                                                <td colspan="2">{{ $remate->organiza }}</td>
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Streaming por</th>
-                                                <td colspan="2"><a href="">elrural.com</a>, <a href="">elrural.com</a>, <a href="">elrural.com</a></td>
+                                                <td colspan="2"><a href="{{ $remate->streaming }}">{{ $remate->streaming }}</a></td>
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Email</th>
-                                                <td colspan="2">Larry the Bird</td>
+                                                <td colspan="2">{{ $remate->email }}</td>
                                                 </tr>
+                                                @if ($remate->updated_at != $remate->created_at)
                                                 <tr>
-                                                <th scope="row">Última actualización</th>
-                                                <td colspan="2">Larry the Bird</td>
+                                                    <th scope="row">Última actualización</th>
+                                                    <td colspan="2">{{ $remate->updated_at }}</td>
                                                 </tr>
+                                                @endif
                                             </tbody>
                                         </table>
                                     </div>

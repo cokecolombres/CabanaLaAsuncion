@@ -18,10 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/remates', 'RemateController@index')->name('remates');
+Route::get('/remates/{id}', 'RemateController@show')->name('mostrar-remate');
 Route::get('/nosotros', 'PublicacionController@index')->name('nosotros');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/remates', 'RemateController@list')->name('list-remates');
-Route::get('/home/remates/nuevo', 'RemateController@create')->name('nuevo-remate');
+Route::get('/mi-cuenta', 'HomeController@index')->name('home');
+Route::get('/mi-cuenta/remates', 'RemateController@list')->name('list-remates');
+Route::get('/mi-cuenta/remates/nuevo', 'RemateController@create')->name('nuevo-remate');
+Route::post('/mi-cuenta/remates/nuevo', 'RemateController@store')->name('guardar-remate');

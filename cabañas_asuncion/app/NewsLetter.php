@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Publicacion extends Model
+class NewsLetter extends Model
 {
     protected $fillable = [
-        'titulo',
-        'cuerpo'
+        'nombres',
+        'email'
     ];
 }

@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-xl-12">
             <a href="{{route('nuevo-remate')}}" class="btn btn-success">
-                    Crear remate
+                    Crear remate >>
                 </a>
                 <div class="card mt-3 mb-3">
                         @if ($remates->count() == 0)
@@ -38,14 +38,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($remates as $remate)
                                     <tr>
-                                        <td scope="row"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td scope="row"> {{$remate->titulo}} </td>
+                                        <td>{{ $remate->fecha }}</td>
+                                        <td>{{ $remate->organiza }}</td>
+                                        <td>{{ $remate->streaming }}</td>
+                                        <td>{{ $remate->email }}</td>
+                                        <td>{{ $remate->updated_at->diffForHumans()}}</td>
                                         <td class="text-center">
+                                            <a href="{{route('mostrar-remate', $remate->id)}}" class="text-primary" >
+                                                <i class="fas fa-eye"></i>
+                                            </a>
                                             <a href="#" class="text-success">
                                                 <i class="fas fa-edit"></i>
                                             </a>
@@ -54,6 +58,7 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
