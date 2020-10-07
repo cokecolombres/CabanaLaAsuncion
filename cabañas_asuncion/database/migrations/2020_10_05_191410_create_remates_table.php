@@ -20,6 +20,7 @@ class CreateRematesTable extends Migration
             $table->string('imagen')->nullable();
             $table->string('titulo')->nullable();
             $table->date('fecha')->nullable();
+            $table->string('hora')->nullable();
             $table->string('organiza')->nullable();
             $table->string('streaming')->nullable();
             $table->string('email')->nullable();
@@ -29,7 +30,9 @@ class CreateRematesTable extends Migration
 
         Schema::create('lotes', function (Blueprint $table) {
             $table->id();
-            $table->string('enlace');
+            $table->string('titulo')->nullable();
+            $table->string('enlace')->nullable();
+            $table->text('descripcion')->nullable();
             $table->bigInteger('remate_id')->unsigned();
             $table->foreign('remate_id')->references('id')->on('remates');
             $table->timestamps();

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class LoteImage extends Model
 {
+    protected $table = 'lote_imagenes';
     protected $fillable = [
         'imagen',
         'featured',

@@ -40,15 +40,19 @@
                                 <tbody>
                                     @foreach ($remates as $remate)
                                     <tr>
-                                        <td scope="row"> {{$remate->titulo}} </td>
+                                        <td scope="row"> {{$remate->titulo}}<br>
+                                        <a href="{{route('crear-lote', $remate->id)}}">
+                                            <small class="pt-0 mt-0">Lote(s)</small>
+                                        </a>
+                                        </td>
                                         <td>{{ $remate->fecha }}</td>
                                         <td>{{ $remate->organiza }}</td>
                                         <td>{{ $remate->streaming }}</td>
                                         <td>{{ $remate->email }}</td>
                                         <td>{{ $remate->updated_at->diffForHumans()}}</td>
                                         <td class="text-center">
-                                            <a href="{{route('mostrar-remate', $remate->id)}}" class="text-primary" >
-                                                <i class="fas fa-eye"></i>
+                                            <a href="#" class="text-secondary" >
+                                                <i class="fas fa-eye pt-0 mt-0"></i>
                                             </a>
                                             <a href="#" class="text-success">
                                                 <i class="fas fa-edit"></i>

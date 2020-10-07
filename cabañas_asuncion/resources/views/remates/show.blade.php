@@ -1,120 +1,111 @@
 @extends('layouts.app')
 @section('content')
-<section class="breadcrumb_area">
-    <img class="breadcrumb_shap" src="" alt="">
-    <div class="container">
-        <div class="breadcrumb_content text-center">
+    <section class="breadcrumb_area">
+      <img class="breadcrumb_shap" src="" alt="">
+        <div class="container">
+          <div class="breadcrumb_content text-center">
             <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">{{$title}}</h1>
+          </div>
         </div>
-    </div>
-</section>
+    </section>
 
-        <section class="more_feature_area">
-            <div class="container">
+      <div class="text-center pt-3">
+        <a href="{{route('list-remates')}}" class="btn btn-success">
+          << Volver al listado
+        </a>
+        <a href="{{route('list-remates')}}" type="button" class="btn btn-warning" data-toggle="modal" data-target="#crear-lote">
+          Crear nuevo lote
+        </a>
+      </div>
 
-                <br>
-                <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#informacion" role="tab" aria-controls="home" aria-selected="true">Información y pre-ofertas</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descargar" role="tab" aria-controls="profile" aria-selected="false">Descargar Catálogo</a>
-                  </li>
-                  <li class="nav-item" role="venta">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#venta" role="tab" aria-controls="contact" aria-selected="false">Catálogo</a>
-                  </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="informacion" role="tabpanel" aria-labelledby="home-tab">
-                        <br>
-                        <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <div class="img_pad">
-
-                                    <img class="img-fluid" src="/imagenes/remate/{{$remate->imagen}}">
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <p><strong>Por informes y consultas:</strong> <br>
-                                            (0381) 421-5400 <br>
-                                            laasuncioncabana@gmail.com
-                                        </p>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="card text-center">
-                                  <div class="">
-
-                                    <div class="sign_info">
-                                         <div class="">
-                                            <div class=" ">
-                                                <h5 class="card-title">Compartí este remate</h5>
-                                                <ul class="list-unstyled social_tag mb-0">
-                                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                                    <li><a href="#"><i class="ti-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="ti-email"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8 wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                <h4 class="mb-30">Nuestro próximo remate</h4>
-
-                                <div class="card">
-                                    <div class="card-header">
-                                        40° REMATE ANUAL
-                                    </div>
-                                    <div class="card-body"> 
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                  <tbody>
-                                                    <tr>
-                                                      <th scope="row">Fecha</th>
-                                                      <td>Viernes 07 de Agosto</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <th scope="row">Hora</th>
-                                                      <td>14 hs</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <th scope="row">Organiza</th>
-                                                      <td colspan="2">Cabaña La Asunción</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <th scope="row">Streaming por</th>
-                                                      <td colspan="2"><a href="">elrural.com</a>, <a href="">elrural.com</a>, <a href="">elrural.com</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <th scope="row">Email</th>
-                                                      <td colspan="2">Larry the Bird</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <th scope="row">Última actualización</th>
-                                                      <td colspan="2">Larry the Bird</td>
-                                                    </tr>
-                                                  </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                                <br>
-
-                                <iframe class="embed-responsive" height="444" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="descargar" role="tabpanel" aria-labelledby="profile-tab">
-                        HOLA2
-                    </div>
-                    <div class="tab-pane fade" id="venta" role="tabpanel" aria-labelledby="contact-tab">
-                        HOLA3
+      <section class="blog_area_two sec_pad pt-0">
+        <div class="container">
+        @if ($lotes->count() == null)
+          <div class="col-xl-12 col-md-12 col-sm-12 pt-2 mt-2">
+            <div class="alert alert-warning text-center" role="alert">
+              <h3>Aún no se han creado lotes para {{$remate->titulo}}</h3>
+            </div>
+          </div>
+        @else              
+        <div class="row">
+          <div class="col-lg-12 blog_grid_info">
+            <div class="row" id="blog_masonry" style="position: relative; height: 2445.69px;">
+            @foreach ($lotes as $lote)
+              <div class="col-sm-6 col-lg-4" style="position: absolute; left: 333px; top: 0px;">
+                <div class="blog_content pb-0 pl-0">
+                    <h5 class="blog_title mb-0">{{$lote->titulo}}</h5>
+                    <p>{{$lote->descripcion}}</p>
+                </div>                          
+                <div class="blog_list_item blog_list_item_two mt-0 mb-2">
+                    <div class="video_post">
+                      <img class="img-fluid" src="{{$lote->featured_imagen_url}}" alt="">
+                      <a class="popup-youtube video_icon" href="{{$lote->enlace}}"><i class="arrow_triangle-right"></i></a>
                     </div>
                 </div>
+                <div class="blog_content pt-0 pl-0 pr-0">
+                  <a href="{{route('imagenes-lote', $lote->id)}}" class="btn btn-success btn-block">
+                    Agregar /Quitar imagen
+                  </a>
+                </div>             
+                </div>
+                @endforeach
+                @endif
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+  <div class="modal fade" id="crear-lote" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Crear lote N° ({{$lotes->count()+1}})</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="{{route('guardar-lote', $remate->id)}}" method="post" enctype="multipart/form-data">
+          @csrf
+          <div class="modal-body">
+   
+            <div class="form-group">
+            <label for="titulo">Titulo de lote</label>
+            <input type="text" name="titulo" id="titulo" class="form-control @error('titulo') is-invalid @enderror" value="{{ old('titulo') }}" required autocomplete="titulo" autofocus>
+            @error('titulo')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+                </span>
+                @enderror         
+              </div>
+              
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" class="form-control @error('descripcion') is-invalid @enderror" style="min-height: 100px; max-height: 100px" value="{{ old('descripcion') }}" autocomplete="descripcion" autofocus></textarea>
+            @error('descripcion')
+            <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror            
+              </div>
+              
+            <div class="form-group">
+              <label for="enlace">Coloque URL del video para insertar</label>
+              <input type="text" name="enlace" id="enlace" class="form-control @error('enlace') is-invalid @enderror" value="{{ old('enlace') }}" required autocomplete="enlace" autofocus></textarea>
+              @error('enlace')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror    
+            </div>
+          
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
 @endsection

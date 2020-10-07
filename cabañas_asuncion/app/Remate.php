@@ -11,11 +11,11 @@ class Remate extends Model
         'imagen',
         'titulo',
         'fecha',
+        'hora',
         'organiza',
         'streaming',
         'email',
         'file',
-        'enlaces'
     ];
 
     public function lotes()

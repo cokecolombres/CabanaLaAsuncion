@@ -76,7 +76,7 @@
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Hora</th>
-                                                {{--  <td>{{ $remate->hora }}</td>  --}}
+                                                <td>{{ $remate->hora }}</td>
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Organiza</th>
@@ -116,6 +116,7 @@
                                     <a class="nav-link" id="lote3-tab" data-toggle="tab" href="#lote3" role="tab" aria-controls="contact" aria-selected="false">Lote 3</a>
                                 </li>
                             </ul>
+                            
                             <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="lote1" role="tabpanel" aria-labelledby="lote1-tab">
                                 <h4 class="mt_30 mb_10">

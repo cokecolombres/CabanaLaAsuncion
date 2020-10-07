@@ -54,9 +54,6 @@
                     </div>
                     <div class="pp-scrollable p-table section section-3" data-page-index="3">
                         <div class="scroll-wrap">
-                           <div class="container">
-                               asdads
-                           </div>
                         </div>
                     </div>
                 </div>

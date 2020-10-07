@@ -18,12 +18,19 @@ Route::get('/', function () {
 });
 
 Route::get('/remates', 'RemateController@index')->name('remates');
-Route::get('/remates/{id}', 'RemateController@show')->name('mostrar-remate');
 Route::get('/nosotros', 'PublicacionController@index')->name('nosotros');
 
 Auth::routes();
-
 Route::get('/mi-cuenta', 'HomeController@index')->name('home');
-Route::get('/mi-cuenta/remates', 'RemateController@list')->name('list-remates');
-Route::get('/mi-cuenta/remates/nuevo', 'RemateController@create')->name('nuevo-remate');
-Route::post('/mi-cuenta/remates/nuevo', 'RemateController@store')->name('guardar-remate');
+Route::middleware(['auth'])->prefix('mi-cuenta')->group(function(){
+
+Route::get('/remates', 'RemateController@list')->name('list-remates');
+Route::get('/remates/nuevo', 'RemateController@create')->name('nuevo-remate');
+Route::post('/remates/nuevo', 'RemateController@store')->name('guardar-remate');
+Route::get('/remates/{id}/lotes', 'RemateController@show')->name('crear-lote');
+Route::post('/remates/{id}/lotes', 'LoteController@store')->name('guardar-lote');
+Route::get('/remates/{id}/lotes/imagen', 'ImagenLoteController@index')->name('imagenes-lote');
+Route::post('/remates/{id}/lotes/imagen', 'ImagenLoteController@store')->name('guardar-imagen');
+Route::delete('/remates/{id}/lotes/imagen', 'ImagenLoteController@destroy');
+Route::get('/remates/{lote}/lotes/imagen/{id}', 'ImagenLoteController@select');
+});

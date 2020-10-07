@@ -13,8 +13,6 @@
 
 </head>
 <body>
-    <div id="app">
-
         <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
                 <div class="animation-preloader">
@@ -70,13 +68,11 @@
         </div>
 
 
-        <div class="body_wrapper">
         @include('layouts.particals.navbar')
-
-        @yield('content')
+        <div class="body_wrapper">
+            @yield('content')
         </div>
 
-    </div>
     @include('layouts.particals.scripts')
 </body>
 </html>

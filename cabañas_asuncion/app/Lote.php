@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Lote extends Model
 {
     protected $fillable = [
+      'titulo',
       'enlace',
+      'descripcion',
       'remate_id'  
     ];
 
@@ -17,7 +19,7 @@ class Lote extends Model
     }
 
     public function imagenes(){
-        return $this->hasMany(Lote::class);
+        return $this->hasMany(LoteImage::class);
     } 
     
     public function getFeaturedImagenUrlAttribute()
