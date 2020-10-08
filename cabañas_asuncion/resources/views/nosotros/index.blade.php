@@ -1,15 +1,69 @@
 @extends('layouts.app')
 @section('content')
-    <section class="breadcrumb_area">
-        <img class="breadcrumb_shap" src="{{asset('theme/img/1-portadas/4.png')}}" alt="">
-        <div class="container">
-            <div class="breadcrumb_content text-center">
-                <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">Nosotros</h1>
+<section class="event_banner_area">
+    <div class="parallax-effect" style="background: url({{asset('theme/img/1-portadas/111.png')}});"></div>
+    <div class="container">
+        <div class="event_banner_content">
+            <div class="round wow zoomIn" data-wow-delay="0.2s"></div>
+            <h6 class="wow fadeInUp" data-wow-delay="0.6s">Noviembre 14, 2020 - 15 hs</h6>
+            <h2 class="wow fadeInUp" data-wow-delay="0.8s"><span>Próximo </span> <br> Remate Anual</h2>
+            <a class="event_btn btn_hover wow fadeInLeft" data-wow-delay="0.9s" href="#">Quiero saber más</a>
+            <a class="event_btn event_btn_two btn_hover wow fadeInRight" data-wow-delay="0.9s" href="#"><i class="arrow_triangle-right_alt2"></i>Ver catálogo</a>
+        </div>
+    </div>
+</section>
+<section class="event_counter_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="event_text wow fadeInLeft">
+                    <h3>Falta poco para nuestro <span>Remate anual</span></h3>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="event_countdown wow fadeInRight">
+                    <div class="event_counter red-time-counter"><div class="red-countdown red-countdown-one" data-countdown="31/12/2019"></div></div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<section class="event_about_area">
+    <div class="container">
+        <div class="row align-items-center flex-row-reverse">
+            <div class="col-lg-6">
+                <div class="event_about_img">
+                    <img class="wow fadeInRight" data-wow-delay="0.2s" src="img/home-event/about.jpg" alt="">
+                    <div class="about_bg"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="event_about_content">
+                    <h2 class="wow fadeInUp">Cabaña <br> La Asunción</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">So I said knees up Jeffrey grub me old mucker Oxford spend a penny, pukka codswallop fantastic lost the plot Queen's English. Daft he legged it mufty chancer porkies burke blatant pardon me lavatory.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="event_about_item wow fadeInUp" data-wow-delay="0.2s">
+                                <img src="img/home-event/marker.png" alt="">
+                                <h6>Where</h6>
+                                <p>Golly gosh the wireless posh loo smashing.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="event_about_item wow fadeInUp" data-wow-delay="0.4s">
+                                <img src="img/home-event/timer.png" alt="">
+                                <h6>When</h6>
+                                <p>Sunday to Wednesday April 24 to 04, 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="">
+    {{-- <section class="">
         <br>
         <div class="container">
             <div class="row">
@@ -117,8 +171,7 @@
                        </div>   
                 </div>
             </div>
-           
-                       
-    </section>
+        </div>         
+    </section> --}}
    @include('layouts.particals.footer')
  @endsection

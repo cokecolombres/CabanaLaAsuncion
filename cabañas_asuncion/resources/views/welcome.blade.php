@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+
+
                 <div class="pagepiling">
                     <div class="pp-scrollable p-table section section-1" data-page-index="1">
                         <div class="scroll-wrap" style="background: rgba(255, 255, 255, 0.25)">

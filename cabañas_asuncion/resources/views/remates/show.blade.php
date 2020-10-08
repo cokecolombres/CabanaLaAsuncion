@@ -38,7 +38,7 @@
                 </div>                          
                 <div class="blog_list_item blog_list_item_two mt-0 mb-2">
                     <div class="video_post">
-                      <img class="img-fluid" src="{{$lote->featured_imagen_url}}" alt="">
+                      <img class="img-fluid mh-100" style="height: 300px;" src="{{$lote->featured_imagen_url}}" alt="">
                       <a class="popup-youtube video_icon" href="{{$lote->enlace}}"><i class="arrow_triangle-right"></i></a>
                     </div>
                 </div>

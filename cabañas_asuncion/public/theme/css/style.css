@@ -15617,7 +15617,7 @@ a .h_head:hover {
 }
 
 .h_footer_dark {
-  background: #010e28;
+  background: #999999;
   padding: 100px 0px 120px;
 }
 .h_footer_dark .company_widget p {
@@ -15641,7 +15641,7 @@ a .h_head:hover {
   border-color: #f8636b;
 }
 .h_footer_dark .f_widget.about-widget .f_list li a, .h_footer_dark .f_widget.company_widget p {
-  color: #7b7b93;
+  color: #333333;
   font-weight: 400;
 }
 .h_footer_dark .f_widget.about-widget .f_list li {
@@ -19370,7 +19370,7 @@ a .h_head:hover {
 }
 
 .event_footer_area {
-  background: #212146;
+  background: #A9A9A9;
 }
 .event_footer_area .instagram_widget ul li a:before {
   background: rgba(253, 71, 93, 0.5);
@@ -21578,7 +21578,7 @@ a .h_head:hover {
   color: #510202;
 }
 .f_widget .widget-wrap p a {
-  color: #677294;
+  color: #333333;
   transition: color 0.2s linear;
 }
 .f_widget.company_widget .mchimp-errmessage, .f_widget.company_widget .mchimp-sucmessage {
@@ -22005,7 +22005,7 @@ a .h_head:hover {
 }
 
 .dark_widget .f-title {
-  color: #fff;
+  color: #510202;
 }
 .dark_widget.company_widget .f_social_icon_two {
   margin-top: 25px;
@@ -22017,7 +22017,7 @@ a .h_head:hover {
   color: #4069eb;
 }
 .dark_widget .widget-wrap p span {
-  color: #fff;
+  color: #510202;
 }
 .dark_widget .widget-wrap p a:hover {
   color: #4069eb;

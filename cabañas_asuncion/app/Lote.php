@@ -34,6 +34,6 @@ class Lote extends Model
     if($featuredImage){
         return $featuredImage->url;
     }
-    return '/imagenes/lotes/no-image.jpg';
+    return '/imagenes/remate/lotes/no-image.jpg';
     }    
 }
