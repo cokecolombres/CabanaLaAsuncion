@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{route('nosotros')}}">
+                        <a class="nav-link" href="{{route('contacto')}}">
                            Contacto
                         </a>
                     </li>

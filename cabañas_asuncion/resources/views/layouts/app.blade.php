@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{!! !empty($title) ? 'Cabaña La Asunción - '.$title :  'Cabaña La Asunción' !!}</title>
+    <title>{!! !empty($title) ? 'Cabaña la asunción - '.$title :  'Cabaña la asunción' !!}</title>
 
     @include('layouts.particals.links')
 
@@ -67,8 +67,8 @@
             </div>
         </div>
 
-
         @include('layouts.particals.navbar')
+
         <div class="body_wrapper">
             @yield('content')
         </div>
