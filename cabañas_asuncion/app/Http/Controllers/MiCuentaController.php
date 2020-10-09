@@ -92,9 +92,11 @@ class MiCuentaController extends Controller
         return view('remates.show', compact('remate', 'title','lotes'));
     }
 
-    public function edit(Remate $remate)
+    public function edit($id)
     {
-        //
+        $remate = Remate::find($id);
+        $title =  'Editar remate ' .$remate->titulo;
+        return view('remates.edit', compact( 'title','remate'));        
     }
 
     public function update(Request $request, Remate $remate)

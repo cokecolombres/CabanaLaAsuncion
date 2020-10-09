@@ -162,7 +162,7 @@
                                                                         <a href="#" class="text-secondary" >
                                                                             <i class="fas fa-eye pt-0 mt-0"></i>
                                                                         </a>
-                                                                        <a href="#" class="text-success">
+                                                                        <a href="{{route('editar-remate',$remate->id)}}" class="text-success">
                                                                             <i class="fas fa-edit"></i>
                                                                         </a>
                                                                         <a href="#" class="text-danger">

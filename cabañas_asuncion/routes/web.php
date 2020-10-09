@@ -25,12 +25,14 @@ Auth::routes();
 Route::get('/mi-cuenta', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->prefix('mi-cuenta')->group(function(){
 
-Route::get('/remates/nuevo', 'MiCuentaController@create')->name('nuevo-remate');
-Route::post('/remates/nuevo', 'MiCuentaController@store')->name('guardar-remate');
-Route::get('/remates/{id}/lotes', 'MiCuentaController@show')->name('crear-lote');
-Route::post('/remates/{id}/lotes', 'LoteController@store')->name('guardar-lote');
-Route::get('/remates/{id}/lotes/imagen', 'ImagenLoteController@index')->name('imagenes-lote');
-Route::post('/remates/{id}/lotes/imagen', 'ImagenLoteController@store')->name('guardar-imagen');
-Route::delete('/remates/{id}/lotes/imagen', 'ImagenLoteController@destroy');
-Route::get('/remates/{lote}/lotes/imagen/{id}', 'ImagenLoteController@select');
+Route::get('/nuevo-remate', 'MiCuentaController@create')->name('nuevo-remate');
+Route::post('/nuevo-remate', 'MiCuentaController@store')->name('guardar-remate');
+Route::get('/{id}/edit-remate', 'MiCuentaController@edit')->name('editar-remate');
+Route::post('/{id}/edit-remate', 'MiCuentaController@update')->name('guardar-edicion');
+Route::get('/{id}/lotes', 'MiCuentaController@show')->name('crear-lote');
+Route::post('/{id}/lotes', 'LoteController@store')->name('guardar-lote');
+Route::get('/{id}/lotes/imagen', 'ImagenLoteController@index')->name('imagenes-lote');
+Route::post('/{id}/lotes/imagen', 'ImagenLoteController@store')->name('guardar-imagen');
+Route::delete('/{id}/lotes/imagen', 'ImagenLoteController@destroy');
+Route::get('/{lote}/lotes/imagen/{id}', 'ImagenLoteController@select');
 });
