@@ -151,6 +151,7 @@ class MiCuentaController extends Controller
             'file' => $pdfFileName,
         ]);
         }
+        return back();
     }
 
     public function update(Request $request,$id)
