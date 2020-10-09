@@ -29,6 +29,7 @@ Route::get('/nuevo-remate', 'MiCuentaController@create')->name('nuevo-remate');
 Route::post('/nuevo-remate', 'MiCuentaController@store')->name('guardar-remate');
 Route::get('/{id}/edit-remate', 'MiCuentaController@edit')->name('editar-remate');
 Route::post('/{id}/edit-remate', 'MiCuentaController@update')->name('guardar-edicion');
+Route::post('/{id}/cambiar-imagen','MiCuentaController@changeImagen')->name('cambiar-imagen');
 Route::get('/{id}/lotes', 'MiCuentaController@show')->name('crear-lote');
 Route::post('/{id}/lotes', 'LoteController@store')->name('guardar-lote');
 Route::get('/{id}/lotes/imagen', 'ImagenLoteController@index')->name('imagenes-lote');

@@ -99,13 +99,44 @@ class MiCuentaController extends Controller
         return view('remates.edit', compact( 'title','remate'));        
     }
 
-    public function update(Request $request, Remate $remate)
+    public function changeImagen(Request $request, $id)
     {
-        //
+        $remate = Remate::find($id);
+        if($request->hasfile('imagen')){     
+            // Eliminar y grabar nueva
+            if(substr($remate->imagen, 0, 4) === "http"){
+                $deleted = true;
+            }else{
+                $fullPath = public_path().'/imagenes/remate/'.$remate->imagen;
+                $deleted = File::delete($fullPath);
+            }
+            if($deleted){
+                $remate->delete();
+            }else{
+            
+            $file = $request->file('imagen');
+            $path = public_path().'/imagenes/remate';
+            $filename = uniqid(). $file->getClientOriginalName();
+            $moved = $file->move($path, $filename);
+                if($moved)
+                {
+                    $remate->update([
+                        'imagen' => $filename
+                    ]);
+                }
+            }    
+        }
+        return redirect()->back();     
     }
 
-    public function destroy(Remate $remate)
+    public function changeFile()
     {
-        //
+
+    }
+
+    public function update(Request $request, Remate $remate)
+    {
+       $remate = Remate::find($id);
+       $remate->fill($request->all())->save();
     }
 }

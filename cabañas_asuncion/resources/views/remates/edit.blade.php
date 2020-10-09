@@ -88,6 +88,9 @@
                             <button type="button" class="btn btn-warning float-left ml-3" data-toggle="modal" data-target="#edit-file">
                                 Cambiar pdf
                             </button>
+                            <button type="button" class="btn btn-danger float-right ml-3">
+                            <i class="fas fa-times"></i>  Cancelar
+                            </button>
                             <button type="submit" class="btn btn-success float-right">
                             <i class="fas fa-save"></i>  Guardar
                             </button>
@@ -107,13 +110,17 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
+              <form action="{{route('cambiar-imagen',$remate->id)}}" method="post" enctype="multipart/form-data">
+                  @csrf
                 <div class="row">
                     <div class="form-group col-6">
                         <img class="img-fluid" src="/imagenes/remate/{{$remate->imagen}}">
                         <label for="imagen">Imagen de remate</label>
                         <input id="imagen" class="form-control-file" type="file" name="imagen">
+                        <button type="submit" class="btn btn-sm btn-success">Actualizar</button>
                     </div>
                 </div>
+              </form>
             </div>
         </div>
     </div>
