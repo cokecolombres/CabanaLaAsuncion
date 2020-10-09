@@ -63,9 +63,9 @@
                                 <div class="card-header">
                                     {{ $remate->titulo }}
                                 </div>
-                                <div class="card-body"> 
-                                    <div class="table-responsive">
-                                        <table class="table">
+                                <div class="card-body p-0"> 
+                                    <div class="table-responsive p-0">
+                                        <table class="table p-0">
                                             <tbody>
                                                 <tr>
                                                 <th scope="row">Fecha</th>
@@ -104,15 +104,16 @@
                             {{--  TABS                              --}}
                             <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                @foreach ($remate->lotes as $lote)
-                                   <a class="nav-link" data-toggle="tab" href="#nav-{{$lote->id}}" role="tab" aria-controls="nav-{{$lote->id}}" aria-selected="true">{{$lote->titulo}}</a>
+                                @foreach ($remate->lotes as $key => $lote)
+                                   <a class="nav-link {{ $key==0 ? 'active' : ''}}" data-toggle="tab" href="#nav-{{$lote->id}}" role="tab" aria-controls="nav-{{$lote->id}}" aria-selected="true">{{$lote->titulo}}</a>
                                 @endforeach
                             </div>
                             </nav>
                             <div class="tab-content" id="nav-tabContent">
-                                @foreach ($remate->lotes as $lote)
-                                  <div class="tab-pane fade show p-3" id="nav-{{$lote->id}}" role="tabpanel" aria-labelledby="nav-{{$lote->id}}">
+                                @foreach ($remate->lotes as $key => $lote)
+                                  <div class="tab-pane fade show {{ $key==0 ? 'active' : ''}}" id="nav-{{$lote->id}}" role="tabpanel" aria-labelledby="nav-{{$lote->id}}">
                                     <h4>{{ $lote->descripcion }}  </h4>
+                                    <div class="row">
                                     <div class="blog_list_item blog_list_item_two col-8">
                                         <div class="video_post">
                                             <img class="img-fluid" src="{{$lote->featured_imagen_url}}" alt="">
@@ -120,12 +121,22 @@
                                                 <i class="arrow_triangle-right"></i>
                                             </a>
                                         </div>
+                                        </div>
                                     </div>  
                                     <h4>Galería de imagenes</h4>
+                                    <div class="row portfolio_gallery mb-50">
                                     @foreach ($lote->imagenes as $imagen)
-                                    {{--  IMAGENES  --}}
-                                    {{--  IMAGENES  --}}
-                                    @endforeach                                                                    
+                                    <div class="col-lg-3 col-sm-6 portfolio_item br ux mb_50">
+                                        <div class="portfolio_img">
+                                            <a href="{{ $imagen->url }}" class="img_popup">
+                                                <img class="img_rounded" src="{{ $imagen->url }}" alt="min-width:170px;max-width:170px;width:170px;min-height:133px;height:133px;max-height:133px;"></a>
+                                        </div>
+                                            {{--  <a href="{{ $imagen->url }}" class="img_popup">
+                                                <img class="img_rounded" src="{{ $imagen->url }}" style="width:250px;height:250px;">
+                                            </a>  --}}
+                                    </div>                              
+                                    @endforeach
+                                    </div>                                                                    
                                 </div>
                                 @endforeach
                             </div>

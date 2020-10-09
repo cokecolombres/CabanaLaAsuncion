@@ -10,7 +10,7 @@
     </section>
     
     <div class="text-center pt-3">
-      <a href="{{route('list-remates')}}" class="btn btn-success">
+      <a href="{{route('home')}}" class="btn btn-success">
         << Volver al listado
       </a>
       <a href="{{route('crear-lote', $lote->remate_id)}}" class="btn btn-warning">

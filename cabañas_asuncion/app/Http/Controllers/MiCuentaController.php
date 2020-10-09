@@ -5,6 +5,7 @@ use File;
 use DateTime;
 use Auth;
 use App\Remate;
+use App\Lote;
 use Illuminate\Http\Request;
 
 class MiCuentaController extends Controller
@@ -13,7 +14,8 @@ class MiCuentaController extends Controller
     {
         $remate = Remate::all()->last();
         $title =  $remate->titulo;
-        return view('remates.index', compact('remate', 'title'));
+        $lotes = Lote::where('id', $remate->id)->get();
+        return view('remates.index', compact('remate', 'title','lotes'));
     }
 
     public function list()
