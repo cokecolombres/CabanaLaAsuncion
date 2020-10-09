@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Remate;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $remates = Remate::orderBy('created_at','desc')->paginate(20);
+        $title = 'Mi cuenta';
+        return view('home', compact('remates', 'title'));
     }
 }

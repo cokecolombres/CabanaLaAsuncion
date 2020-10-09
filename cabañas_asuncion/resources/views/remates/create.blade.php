@@ -13,7 +13,7 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-xl-12">
-                <a href="{{route('list-remates')}}" class="btn btn-success">
+                <a href="{{route('home')}}" class="btn btn-success">
                    << Ir a lista
                 </a>
                 <div class="card mt-3 mb-3">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group col-lg-4 col-sm-12">
                           <label for="streaming">Enlace de Streaming</label>
-                          <input type="url" name="streaming" id="streaming" class="form-control @error('streaming') is-invalid @enderror" value="{{ old('streaming') }}" required autocomplete="streaming" autofocus>
+                          <input type="string" name="streaming" id="streaming" class="form-control @error('streaming') is-invalid @enderror" value="{{ old('streaming') }}" required autocomplete="streaming" autofocus>
                           @error('streaming')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>

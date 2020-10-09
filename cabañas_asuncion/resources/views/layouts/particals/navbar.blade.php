@@ -49,7 +49,7 @@
                             <a class="dropdown-item" href="{{route('home')}}">
                                 Mi Cuenta
                             </a>                                    
-                            <a class="dropdown-item" href="{{route('list-remates')}}">
+                            {{-- <a class="dropdown-item" href="{{route('list-remates')}}">
                                 Remates
                             </a>                                    
                             <a class="dropdown-item" href="{{route('home')}}">
@@ -57,7 +57,7 @@
                             </a>                                    
                             <a class="dropdown-item" href="#">
                                 Perfil
-                            </a>                                    
+                            </a>                                     --}}
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">

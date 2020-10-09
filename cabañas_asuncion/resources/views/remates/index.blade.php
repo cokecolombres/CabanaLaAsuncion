@@ -84,7 +84,7 @@
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Streaming por</th>
-                                                <td colspan="2"><a href="{{ $remate->streaming }}">{{ $remate->streaming }}</a></td>
+                                                <td colspan="2"><a href="{{ $remate->streaming }}" target="_blank">{{ $remate->streaming }}</a></td>
                                                 </tr>
                                                 <tr>
                                                 <th scope="row">Email</th>

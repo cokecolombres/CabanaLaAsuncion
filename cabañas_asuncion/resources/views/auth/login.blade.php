@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <br><br><br><br>
+    <div class="row justify-content-center mt_130">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -64,6 +65,7 @@
                                 @endif
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
