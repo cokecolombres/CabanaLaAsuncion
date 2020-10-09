@@ -10,10 +10,10 @@
     </section>
 
       <div class="text-center pt-3">
-        <a href="{{route('list-remates')}}" class="btn btn-success">
+        <a href="{{route('home')}}" class="btn btn-success">
           << Volver al listado
         </a>
-        <a href="{{route('list-remates')}}" type="button" class="btn btn-warning" data-toggle="modal" data-target="#crear-lote">
+        <a href="#crerlote" type="button" class="btn btn-warning" data-toggle="modal" data-target="#crear-lote">
           Crear nuevo lote
         </a>
       </div>

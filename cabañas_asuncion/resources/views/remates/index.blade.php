@@ -102,7 +102,33 @@
                         
                             <br>
                             {{--  TABS                              --}}
-                           
+                            <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                @foreach ($remate->lotes as $lote)
+                                   <a class="nav-link" data-toggle="tab" href="#nav-{{$lote->id}}" role="tab" aria-controls="nav-{{$lote->id}}" aria-selected="true">{{$lote->titulo}}</a>
+                                @endforeach
+                            </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                @foreach ($remate->lotes as $lote)
+                                  <div class="tab-pane fade show p-3" id="nav-{{$lote->id}}" role="tabpanel" aria-labelledby="nav-{{$lote->id}}">
+                                    <h4>{{ $lote->descripcion }}  </h4>
+                                    <div class="blog_list_item blog_list_item_two col-8">
+                                        <div class="video_post">
+                                            <img class="img-fluid" src="{{$lote->featured_imagen_url}}" alt="">
+                                            <a class="popup-youtube video_icon" href="{{$lote->enlace}}">
+                                                <i class="arrow_triangle-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>  
+                                    <h4>Galería de imagenes</h4>
+                                    @foreach ($lote->imagenes as $imagen)
+                                    {{--  IMAGENES  --}}
+                                    {{--  IMAGENES  --}}
+                                    @endforeach                                                                    
+                                </div>
+                                @endforeach
+                            </div>
                             {{--  TABS                              --}}
 
                         </div>

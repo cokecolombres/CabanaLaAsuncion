@@ -32,7 +32,7 @@ class CreateRematesTable extends Migration
             $table->id();
             $table->string('titulo')->nullable();
             $table->string('enlace')->nullable();
-            $table->text('descripcion')->nullable();
+            $table->string('descripcion')->nullable();
             $table->bigInteger('remate_id')->unsigned();
             $table->foreign('remate_id')->references('id')->on('remates');
             $table->timestamps();

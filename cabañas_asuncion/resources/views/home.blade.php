@@ -150,7 +150,7 @@
                                                                 <tr>
                                                                     <td scope="row"> {{$remate->titulo}}<br>
                                                                     <a href="{{route('crear-lote', $remate->id)}}">
-                                                                        <small class="pt-0 mt-0">Lote(s)</small>
+                                                                        <small class="pt-0 mt-0">Lote ({{$remate->lotes->count()}})</small>
                                                                     </a>
                                                                     </td>
                                                                     <td>{{ $remate->fecha }}</td>
