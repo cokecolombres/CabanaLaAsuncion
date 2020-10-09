@@ -24,7 +24,7 @@
                     </div>
                 <div class="card-body p-0">
                     <div class="container pt-3">
-                        <form action="{{route('guardar-remate',$remate->id)}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('guardar-edicion',$remate->id)}}" method="post" enctype="multipart/form-data">
                           @csrf
                         <div class="row">
                         <div class="form-group col-lg-8 col-sm-12">
