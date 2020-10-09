@@ -14,13 +14,10 @@
             <br>
             <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#informacion" role="tab" aria-controls="home" aria-selected="true"><i class="ti-info"></i> Información y pre-ofertas</a>
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#informacion" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-info-circle"></i> Información y pre-ofertas</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descargar" role="tab" aria-controls="profile" aria-selected="false"><i class="ti-download"></i> Descargar Catálogo</a>
-            </li>
-            <li class="nav-item" role="venta">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#venta" role="tab" aria-controls="contact" aria-selected="false"><i class="ti-clipboard"></i> Catálogo</a>
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descargar" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-download"></i> Ver y Descargar catálogo</a>
             </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -62,7 +59,7 @@
                         <div class="col-md-8 wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                             <h4 class="mb-30">Nuestro próximo remate</h4>
 
-                            <div class="card">
+                            <div class="card mb-0">
                                 <div class="card-header">
                                     {{ $remate->titulo }}
                                 </div>
@@ -104,244 +101,29 @@
                             
                         
                             <br>
-
-                            {{-- <div class="">
-                                <div class="hosting_title security_title text-center">
-                                    <h2 class="wow fadeInUp" data-wow-delay="0.2s"><span>TOROS BRAFORD </span>Definitivos, avanzados, registrados y controlados</h2>
-                                </div>
-                                <div class="event_schedule_inner">
-                                    <ul class="nav nav-tabs event_tab" role="tablist">
-                                        <li class="nav-item wow fadeInUp" data-wow-delay="0.4s">
-                                            <a class="nav-link active" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">
-                                                <h5>Lote 1<span></span></h5>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item wow fadeInUp" data-wow-delay="0.6s">
-                                            <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">
-                                                <h5>Lote 2<span></span></h5>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item wow fadeInUp" data-wow-delay="0.8s">
-                                            <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="three" aria-selected="false">
-                                                <h5>Lote 3<span></span></h5>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content event_tab_content">
-                                        <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="one-tab">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/conference.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">The future of the UI/UX</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/digital.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Opening Conference</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/marketing.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Digital World Event Information</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/conference.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Digital Marketing Theory</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/conference.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">The future of the UI/UX</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/digital.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Opening Conference</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/marketing.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Digital World Event Information</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/conference.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Digital Marketing Theory</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/marketing.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Digital World Event Information</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/conference.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Digital Marketing Theory</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/conference.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">The future of the UI/UX</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="img/home-event/digital.jpg" alt="">
-                                                    <a href="#"><i class="icon_clock_alt"></i>10:30 - 12:30 AM</a>
-                                                    <a href="#"><i class="icon_pin_alt"></i>Room 2</a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h3 class="h_head">Opening Conference</h3>
-                                                    <span>by <a href="#">Hanson Deck</a></span>
-                                                    <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one, is tosser car boot knees.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-
-                            {{-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="lote1-tab" data-toggle="tab" href="#lote1" role="tab" aria-controls="home" aria-selected="true">Lote 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lote2-tab" data-toggle="tab" href="#lote2" role="tab" aria-controls="profile" aria-selected="false">Lote 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="lote3-tab" data-toggle="tab" href="#lote3" role="tab" aria-controls="contact" aria-selected="false">Lote 3</a>
-                                </li>
-                            </ul>
-                            
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="lote1" role="tabpanel" aria-labelledby="lote1-tab">
-                                    <h4 class="mt_30 mb_10">
-                                        Lote 1
-                                    </h4>
-                                    <iframe class="embed-responsive" height="420" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="tab-pane fade" id="lote2" role="tabpanel" aria-labelledby="lote2-tab">
-                                    <h4 class="mt_30 mb_10">
-                                        Lote 2
-                                    </h4>
-                                    <iframe class="embed-responsive" height="420" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="tab-pane fade" id="lote3" role="tabpanel" aria-labelledby="lote3-tab">
-                                    <h4 class="mt_30 mb_10">
-                                        Lote 3
-                                    </h4>
-                                    <iframe class="embed-responsive" height="420" src="https://www.youtube.com/embed/pYDzqXAsCFM?list=PLq5CSGCGsUAlZgDbu5t77V_Shzjg1KXtj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div> --}}
-                            
+                            {{--  TABS                              --}}
+                           
+                            {{--  TABS                              --}}
 
                         </div>
                     </div>
                 </div>
+
                 <div class="tab-pane fade" id="descargar" role="tabpanel" aria-labelledby="profile-tab">
-                    HOLA2
-                </div>
-                <div class="tab-pane fade" id="venta" role="tabpanel" aria-labelledby="contact-tab">
-                    HOLA3
+                    <div class="pdf mt-5">
+                        @if ($remate->file)
+                        <h4 class="mb-30">Nuestro catálogo</h4>
+                        <iframe width="100%" height="800px" src="/file/remate/{{$remate->file}}" frameborder="0"></iframe>
+                        @else
+                            <div class="alert alert-warning" role="alert">
+                                No se encontro archivo PDF
+                            </div>                            
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
     </section>  
-
-    {{-- <section class="partner_logo_area_two">
-        <div class="container">
-
-            <div class="subscribe_form_info s_form_info_two text-center">
-                <h2 class="f_600 f_size_30 l_height30 t_color3 mb_10">Dejános tu email</h2>
-                <h4 class="f_600 l_height30 t_color3">Así te mantenemos al tanto de nuestros próximos remates</h4>
-                <form action="#" class="subscribe-form">
-                    <input type="text" class="form-control" placeholder="Tu email">
-                    <button type="submit" class="btn_hover btn_four mt_40">Suscribirse</button>
-                </form>
-            </div>
-        </div>
-    </section> --}}
 
     @include('layouts.particals.footer')
 @endsection
