@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="descargar" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="pdf mt-5">
+                    <div class="pdf mt-3">
                         @if ($remate->file)
                         <h4 class="mb-30">Nuestro catálogo</h4>
                         <iframe width="100%" height="800px" src="/file/remate/{{$remate->file}}" frameborder="0"></iframe>
