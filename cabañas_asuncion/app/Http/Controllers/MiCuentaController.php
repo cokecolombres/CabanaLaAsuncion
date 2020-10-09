@@ -101,8 +101,8 @@ class MiCuentaController extends Controller
 
     public function changeImagen(Request $request, $id)
     {
-        $remate = Remate::find($id);
         if($request->hasfile('imagen')){     
+        $remate = Remate::find($id);
             // Eliminar y grabar nueva
             if(substr($remate->imagen, 0, 4) === "http"){
                 $deleted = true;
@@ -111,8 +111,8 @@ class MiCuentaController extends Controller
                 $deleted = File::delete($fullPath);
             }
             if($deleted){
-                $remate->delete();
-            }else{
+                $remate->update();
+            }
             
             $file = $request->file('imagen');
             $path = public_path().'/imagenes/remate';
@@ -125,18 +125,39 @@ class MiCuentaController extends Controller
                     ]);
                 }
             }    
-        }
         return redirect()->back();     
     }
 
-    public function changeFile()
+    public function changeFile(Request $request, $id)
     {
+        if($request->hasfile('archivo')){   
+        $remate = Remate::find($id);
+            if(substr($remate->archivo, 0, 4) === "http"){
+                $deleted = true;
+            }else{
+                $fullPath = public_path().'/file/remate/'.$remate->archivo;
+                $deleted = File::delete($fullPath);
+            }
+            if($deleted){
+                $remate->update();
+            }              
 
+        $pdfFile = $request->file('archivo');
+        $filePath = public_path().'/file/remate';
+        $pdfFileName = uniqid(). $pdfFile->getClientOriginalName();
+        $pdfMoved = $pdfFile->move($filePath, $pdfFileName);
+
+        $remate->update([
+            'file' => $pdfFileName,
+        ]);
+        }
     }
 
-    public function update(Request $request, Remate $remate)
+    public function update(Request $request,$id)
     {
        $remate = Remate::find($id);
        $remate->fill($request->all())->save();
+
+       return back();
     }
 }

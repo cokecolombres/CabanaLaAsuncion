@@ -130,13 +130,16 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
+              <form action="{{route('cambiar-archivo',$remate->id)}}" method="post" enctype="multipart/form-data">
+                  @csrf
                 <div class="row">
                     <div class="form-group col-6">
-                        <img class="img-fluid" src="/imagenes/remate/{{$remate->imagen}}">
-                        <label for="imagen">Imagen de remate</label>
-                        <input id="imagen" class="form-control-file" type="file" name="imagen">
+                        <label for="archivo">Imagen de remate</label>
+                        <input id="archivo" class="form-control-file" type="file" name="archivo">
+                        <button type="submit" class="btn btn-sm btn-success">Actualizar</button>
                     </div>
                 </div>
+              </form>
             </div>
         </div>
     </div>
