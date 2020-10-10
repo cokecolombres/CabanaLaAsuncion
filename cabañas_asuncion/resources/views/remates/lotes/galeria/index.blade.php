@@ -58,7 +58,7 @@
                         <i class="fas fa-star"></i> Imagen destacada
                     </button>
                     @else
-                    <a href="{{url('/mi-cuenta/remates/'.$lote->id.'/lotes/imagen/'.$imagen->id)}}" class="btn btn-success btn-sm btn-block mt-2">
+                    <a href="{{url('/mi-cuenta/lotes/imagen/'.$lote->id.'/'.$imagen->id)}}" class="btn btn-success btn-sm btn-block mt-2">
                         <i class="far fa-star"></i> Imagen destacada
                     </a>
                     @endif   

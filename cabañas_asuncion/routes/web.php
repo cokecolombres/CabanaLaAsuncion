@@ -27,6 +27,8 @@ Auth::routes();
 Route::get('/mi-cuenta', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->prefix('mi-cuenta')->group(function(){
 
+Route::delete('/eliminar-subscriptor/{id}', 'MiCuentaController@quitarSubscriptores');
+Route::delete('/eliminar-mensaje/{id}', 'MiCuentaController@borrarMensajes');
 Route::get('/nuevo-remate', 'MiCuentaController@create')->name('nuevo-remate');
 Route::post('/nuevo-remate', 'MiCuentaController@store')->name('guardar-remate');
 Route::get('/edit-remate/{id}', 'MiCuentaController@edit')->name('editar-remate');
@@ -36,7 +38,7 @@ Route::post('/cambiar-archivo/{id}','MiCuentaController@changeFile')->name('camb
 Route::get('/lotes/{id}', 'MiCuentaController@show')->name('crear-lote');
 Route::post('/lotes/{id}', 'LoteController@store')->name('guardar-lote');
 Route::get('/lotes/imagen/{id}', 'ImagenLoteController@index')->name('imagenes-lote');
+Route::get('/lotes/imagen/{lote}/{id}', 'ImagenLoteController@select');
 Route::post('/lotes/imagen/{id}', 'ImagenLoteController@store')->name('guardar-imagen');
 Route::delete('/lotes/imagen/{id}', 'ImagenLoteController@destroy');
-Route::get('/{lote}/lotes/imagen/{id}', 'ImagenLoteController@select');
 });

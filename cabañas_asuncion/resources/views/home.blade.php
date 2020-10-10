@@ -38,6 +38,7 @@
                                                 <th scope="col">Nombre</th>
                                                 <th scope="col">Email</th>
                                                 <th width="20px">Suscripto</th>
+                                                <th class="text-center">Acción</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -46,6 +47,15 @@
                                                     <th scope="row">{{$subscriptor->nombres}}</th>
                                                     <td>{{$subscriptor->email}}</td>
                                                     <td>{{$subscriptor->created_at->diffForHumans()}}</td>
+                                                    <td class="text-center">
+                                                        <form action="/mi-cuenta/eliminar-subscriptor/{{$subscriptor->id}}" method="post">
+                                                        @csrf
+                                                        {{method_field('delete')}}
+                                                        <button type="submit" class="btn btn-sm btn-block btn-danger mt-2">
+                                                            <i class="fas fa-trash ml-2"></i>
+                                                        </button>                    
+                                                        </form>                                                                                                          
+                                                    </td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
@@ -70,10 +80,10 @@
                                         <table class="table">
                                             <thead class="thead-light">
                                                 <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Nombre</th>
-                                                <th scope="col">Email</th>
-                                                <th scope="col">Mensaje</th>
+                                                    <th scope="col">Nombre</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Mensaje</th>
+                                                    <th scope="col">Acción</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -83,6 +93,15 @@
                                                     <td>{{$contact->email}}</td>
                                                     <td>{{$contact->asunto}}</td>
                                                     <td>{{$contact->mensaje}}</td>
+                                                    <td>
+                                                        <form action="/mi-cuenta/eliminar-mensaje/{{$contact->id}}" method="post">
+                                                        @csrf
+                                                        {{method_field('delete')}}
+                                                        <button type="submit" class="btn btn-sm btn-block btn-danger mt-2">
+                                                            <i class="fas fa-trash ml-2"></i>
+                                                        </button>                    
+                                                        </form>                                                         
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                             </tbody>

@@ -42,11 +42,9 @@ class ImagenLoteController extends Controller
             $fullPath = public_path().'/imagenes/remate/lotes/'.$loteImage->imagen;
             $deleted = File::delete($fullPath);
         }
-        
         if($deleted){
             $loteImage->delete();
         }
-
         return back();
     }
 

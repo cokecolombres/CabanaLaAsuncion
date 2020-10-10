@@ -25,26 +25,32 @@
                             <div class="row">
                                 <div class="form-group text_box col-lg-6">
                                     <input type="text" placeholder="Ingrese su nombre y apellido" class=" @error('nombres') is-invalid @enderror" name="nombres" value="{{ old('nombres') }}" required autocomplete="nombres" autofocus>
-                                @error('nombres')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror                               
+                                    @error('nombres')
+                                    <div class="alert error">
+                                    <div class="alert_body">
+                                        <i class="icon-close"></i>
+                                        {{ $message }}
+                                    </div>
+                                    <div class="alert_close"><i class="icon_close"></i></div>
+                                    </div>                                        
+                                    @enderror                               
                                 </div>
                                 <div class="form-group text_box col-lg-6">
                                     <input type="email" name="email" placeholder="Ingrese su correo electrónico" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror                       
+                                    @error('email')
+                                    <div class="alert error">
+                                    <div class="alert_body">
+                                        <i class="icon-close"></i>
+                                        {{ $message }}
+                                    </div>
+                                    <div class="alert_close"><i class="icon_close"></i></div>
+                                    </div>                                        
+                                    @enderror                       
                                 </div>
                                 <div class="col-lg-12">
                                     <button type="submit" class="btn_three">Subscribirme</button>                                
                                 </div>
                             </div>
-                            {{--  <p class="mchimp-errmessage" style="display: none;"></p>  --}}
-                            {{--  <p class="mchimp-sucmessage" style="display: none;"></p>  --}}
                         </form>
                     </div>
                 </div>

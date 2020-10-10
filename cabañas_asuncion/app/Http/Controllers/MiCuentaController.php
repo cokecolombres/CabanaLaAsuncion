@@ -6,6 +6,8 @@ use DateTime;
 use Auth;
 use App\Remate;
 use App\Lote;
+use App\NewsLetter;
+use App\Contact;
 use Illuminate\Http\Request;
 
 class MiCuentaController extends Controller
@@ -162,5 +164,19 @@ class MiCuentaController extends Controller
        $remate->fill($request->all())->save();
 
        return back();
+    }
+
+    public function quitarSubscriptores($id)
+    {
+        $subscriptor = Newsletter::find($id);
+        $subscriptor->delete();
+        return back();
+    }
+
+    public function borrarMensajes($id)
+    {
+        $subscriptor = Contact::find($id);
+        $subscriptor->delete();
+        return back();
     }
 }

@@ -92,19 +92,4 @@ class RemateController extends Controller
         $title =  'Crear lote para '.$remate->titulo;
         return view('remates.show', compact('remate', 'title','lotes'));
     }
-
-    public function edit(Remate $remate)
-    {
-        //
-    }
-
-    public function update(Request $request, Remate $remate)
-    {
-        //
-    }
-
-    public function destroy(Remate $remate)
-    {
-        //
-    }
 }
