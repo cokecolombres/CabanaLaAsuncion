@@ -162,5 +162,6 @@
         </div>
     </section>  
 
+
     @include('layouts.particals.footer')
 @endsection

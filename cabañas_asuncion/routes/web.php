@@ -19,7 +19,9 @@ Route::get('/', function () {
 
 Route::get('/remates', 'MiCuentaController@index')->name('remates');
 Route::get('/nosotros', 'FrontController@indexNosotros')->name('nosotros');
+Route::post('/nosotros', 'FrontController@newsLetter')->name('newsletter');
 Route::get('/contacto', 'FrontController@indexContacto')->name('contacto');
+Route::post('/contacto', 'FrontController@mensajeContacto')->name('mensaje-contacto');
 
 Auth::routes();
 Route::get('/mi-cuenta', 'HomeController@index')->name('home');

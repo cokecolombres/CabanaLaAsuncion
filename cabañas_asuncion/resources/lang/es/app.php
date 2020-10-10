@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'regards' => 'Saludos',
     'sales_history' => 'Historial de ventas',
     'new_order' => 'Nueva orden',
     'order' => 'Orden',

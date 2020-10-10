@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Remate;
+use App\Contact;
+use App\NewsLetter;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $remates = Remate::orderBy('created_at','desc')->paginate(20);
+        $contacts = Contact::orderBy('created_at','desc')->paginate(20);
+        $subscriptors = NewsLetter::orderBy('created_at','desc')->paginate(20);
         $title = 'Mi cuenta';
-        return view('home', compact('remates', 'title'));
+        return view('home', compact('remates', 'title','contacts','subscriptors'));        
     }
 }

@@ -25,43 +25,33 @@
                             <div class="card">
                                 <div class="card-header">Nuevos suscriptores</div>
                                 <div class="card-body" style="min-height: 300px;">
+                                    @if ($subscriptors->count() == 0)
                                     <div class="alert alert-primary mb-0" role="alert">
                                         <strong>Todavía no tiene suscripciones</strong>
-                                    </div>
-                                    
+                                    </div>                                        
                                     <hr>
+                                    @else
                                     <div class="table-responsive-md">
                                         <table class="table">
                                             <thead class="thead-light">
                                                 <tr>
-                                                <th scope="col">#</th>
                                                 <th scope="col">Nombre</th>
                                                 <th scope="col">Email</th>
                                                 <th width="20px">Suscripto</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($subscriptors as $subscriptor)
                                                 <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Adrian Tula</td>
-                                                    <td>Otto@hola.com</td>
-                                                    <td>17/06/2020 16:04</td>
+                                                    <th scope="row">{{$subscriptor->nombres}}</th>
+                                                    <td>{{$subscriptor->email}}</td>
+                                                    <td>{{$subscriptor->created_at->diffForHumans()}}</td>
                                                 </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Coke Tula</td>
-                                                    <td>Thornton@hola.com</td>
-                                                    <td>17/06/2020 16:04</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Facundo Tula</td>
-                                                    <td>the Bird@hola.com</td>
-                                                    <td>17/06/2020 16:04</td>
-                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
+                                    @endif
                                 </div>
 
                             </div>
@@ -70,12 +60,12 @@
                             <div class="card">
                                 <div class="card-header">Nuevos mensajes</div>
                                 <div class="card-body" style="min-height: 300px;">
+                                    @if ($contacts->count() == null)
                                     <div class="alert alert-primary mb-0" role="alert">
                                         <strong>Todavía no recibio ningún mensaje</strong>
-                                    </div>
-
+                                    </div>                                        
                                     <hr>
-
+                                    @else
                                     <div class="table-responsive-md">
                                         <table class="table">
                                             <thead class="thead-light">
@@ -87,27 +77,18 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                              @foreach ($contacts as $contact)
                                                 <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Adrian</td>
-                                                    <td>Otto@hola.com</td>
-                                                    <td>Hola! Mi nombre es raul queria saber si hacen ventas por pre oferta. Me encantan sus animales, un saludo</td>
+                                                    <th scope="row">{{$contact->nombres}}</th>
+                                                    <td>{{$contact->email}}</td>
+                                                    <td>{{$contact->asunto}}</td>
+                                                    <td>{{$contact->mensaje}}</td>
                                                 </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Coke</td>
-                                                    <td>Thornton@hola.com</td>
-                                                    <td>Hola! Mi nombre es raul queria saber si hacen ventas por pre oferta. Me encantan sus animales, un saludo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Facundo</td>
-                                                    <td>the Bird@hola.com</td>
-                                                    <td>Hola! Mi nombre es raul queria saber si hacen ventas por pre oferta. Me encantan sus animales, un saludo</td>
-                                                </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div>                                        
+                                    @endif
                                     
                                 </div>
             

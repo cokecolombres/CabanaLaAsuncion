@@ -30,26 +30,47 @@
                 </div>
                 <div class="col-lg-8 offset-lg-1">
                     <div class="contact_form">
-                        <form action="#" method="post">
+                        <form action="{{route('mensaje-contacto')}}" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group text_box">
-                                        <input type="text" name="name" placeholder="Nombre y Apellido...">
+                                    <input type="text" name="nombres" placeholder="Nombre y Apellido..." class="form-control  @error('nombres') is-invalid @enderror" value="{{ old('nombres') }}" required autocomplete="nombres" autofocus>
+                                    @error('nombres')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror                                          
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group text_box">
-                                        <input type="text" name="email" placeholder="Correo electrónico...">
+                                    <input type="text" name="email" placeholder="Correo electrónico..." class="form-control  @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror                                              
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group text_box">
-                                        <input type="text" name="asunto" placeholder="Asunto de mensaje...">
+                                    <input type="text" name="asunto" placeholder="Asunto de mensaje..." class="form-control  @error('asunto') is-invalid @enderror" value="{{ old('asunto') }}" required autocomplete="asunto" autofocus>
+                                    @error('asunto')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror                                       
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group text_box">
-                                        <textarea name="mensaje" cols="30" rows="10" placeholder="Escribenos tu mensaje"></textarea>
+                                    <textarea name="mensaje" cols="30" rows="10" placeholder="Escribenos tu mensaje" class="form-control  @error('mensaje') is-invalid @enderror" value="{{ old('mensaje') }}" required autocomplete="mensaje" autofocus></textarea>
+                                    @error('mensaje')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror                                          
                                     </div>
                                 </div>
                             </div>
