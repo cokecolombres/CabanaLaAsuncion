@@ -23,7 +23,7 @@
             </div>
             <div class="col-lg-2 col-md-6">
                 <div class="f_widget dark_widget about-widget">
-                    <h3 class="f-title f_500 t_color f_size_18 mb_40">Cabaña</h3>
+                    <h3 class="f-title f_500 t_color f_size_20 mb_40">Cabaña</h3>
                     <ul class="list-unstyled f_list">
                         <li><a href="#">Nuestra historia</a></li>
                         <li><a href="#">Próximo remate</a></li>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="f_widget dark_widget about-widget pl_40">
-                    <h3 class="f-title f_500 t_color f_size_18 mb_40">Nuestros toros</h3>
+                    <h3 class="f-title f_500 t_color f_size_20 mb_40">Nuestros toros</h3>
                     <ul class="list-unstyled f_list">
                         <li><a href="#">Información general</a></li>
                         <li><a href="#">Genética</a></li>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="f_widget dark_widget instagram_widget">
-                    <h3 class="f-title f_500 t_color f_size_18 mb_40">Fotos &amp; videos </h3>
+                    <h3 class="f-title f_500 t_color f_size_20 mb_40">Fotos &amp; videos </h3>
                     <ul class="list-unstyled">
                         <li>
                             <a href="#"><img src="{{asset('theme/img/home-event/instragram1.jpg')}}" alt=""></a>

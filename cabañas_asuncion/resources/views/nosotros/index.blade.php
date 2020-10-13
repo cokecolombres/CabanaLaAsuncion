@@ -33,35 +33,87 @@
         <div class="row align-items-center flex-row-reverse">
             <div class="col-lg-6">
                 <div class="event_about_img">
-                    <img class="wow fadeInRight" data-wow-delay="0.2s" src="img/home-event/about.jpg" alt="">
+                    <img class="wow fadeInRight" data-wow-delay="0.2s" src="{{url('theme/img/2-imagenes/1index.png')}}" alt="">
                     <div class="about_bg"></div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="event_about_content">
                     <h2 class="wow fadeInUp">Cabaña <br> La Asunción</h2>
-                    <p class="wow fadeInUp" data-wow-delay="0.2s">So I said knees up Jeffrey grub me old mucker Oxford spend a penny, pukka codswallop fantastic lost the plot Queen's English. Daft he legged it mufty chancer porkies burke blatant pardon me lavatory.</p>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="event_about_item wow fadeInUp" data-wow-delay="0.2s">
-                                <img src="img/home-event/marker.png" alt="">
-                                <h6>Where</h6>
-                                <p>Golly gosh the wireless posh loo smashing.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="event_about_item wow fadeInUp" data-wow-delay="0.4s">
-                                <img src="img/home-event/timer.png" alt="">
-                                <h6>When</h6>
-                                <p>Sunday to Wednesday April 24 to 04, 2019</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">
+                        <strong>Somos productores de genética de elite, exclusivos de raza Braford.</strong> 
+                    </p>
+                    <p class="wow fadeInUp" data-wow-delay="0.4s">
+                        Nuestros animales son rústicos, tienen una gran inmunidad lograda de manera natural y, capacidad para trabajar en cualquier campo gracias a las condiciones en las que se crían.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="event_features_area">
+            <div class="container">
+                <div class="hosting_title security_title text-center">
+                    <h2 class="wow fadeInUp" data-wow-delay="0.2s"><span>The Event</span>SaasLand in Town</h2>
+                </div>
+                <div class="row event_features_inner">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="event_features_item text-center wow fadeInUp">
+                            <img src="{{url('theme/img/home-event/leader.png')}}" alt="">
+                            <a href="#"><h5>Meet the Leaders</h5></a>
+                            <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one.</p>
+                            <a href="#" class="e_features_btn">Buy Tickets <i class="icon_plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="event_features_item text-center wow fadeInUp" data-wow-delay="0.2s">
+                            <img src="{{url('theme/img/home-event/meetup.png')}}" alt="">
+                            <a href="#"><h5>Day Long Meetup</h5></a>
+                            <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one.</p>
+                            <a href="#" class="e_features_btn">Buy Tickets <i class="icon_plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="event_features_item text-center wow fadeInUp" data-wow-delay="0.4s">
+                            <img src="{{url('theme/img/home-event/chat.png')}}" alt="">
+                            <a href="#"><h5>Ask Questions</h5></a>
+                            <p>Lost the plot lurgy on your bike mate Oxford hanky panky blow off haggle golly gosh do one.</p>
+                            <a href="#" class="e_features_btn">Buy Tickets <i class="icon_plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="event_promotion_area">
+            <div class="container">
+                <div class="hosting_title security_title text-center">
+                    <h2 class="wow fadeInUp" data-wow-delay="0.2s"><span>Main Discussions</span>SaasLand Visual Studio</h2>
+                </div>
+                <div class="event_promotion_inner">
+                    <div class="event_img">
+                    <img src="{{url('theme/img/home-event/promo.jpg')}}" alt="">
+                    </div>
+                    <div class="row event_promotion_info align-items-center">
+                        <div class="col-md-6">
+                            <div class="e_promo_text wow fadeInDown">
+                                <div class="d-flex">
+                                    <a href="#" class="promo_tag">Workshop</a>
+                                    <a href="#" class="date">24 - 06 - 2019</a>
+                                </div>
+                                <h3>The Impact of Event Marketing</h3>
+                                <a href="#" class="event_btn event_btn_two btn_hover">Buy Tickets</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Only a quid it's all gone to pot say codswallop loo tinkety tonk old fruit Oxford Why, porkies cheeky bugger tickety-boo butty a load of old tosh bleeder, down the pub well owt to do with me is chip shop gormless. I don't want no agro bleeder tomfoolery knees up what a load of rubbish the full monty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     {{-- <section class="">
         <br>
