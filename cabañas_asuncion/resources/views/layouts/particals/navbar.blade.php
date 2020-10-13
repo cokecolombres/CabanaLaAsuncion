@@ -1,7 +1,8 @@
 <header class="header_area">
     <nav class="navbar navbar-expand-lg menu_one menu_four hosting_menu">
         <div class="container">
-            <a class="navbar-brand sticky_logo" href="{{url('/')}}"><img src="{{asset('theme/img/6-logo/logo2.png')}}" alt="logo" style="max-width: 200px;"><img src="{{asset('theme/img/6-logo/logo2.png')}}" alt="logo" style="max-width: 120px;"></a>
+            {{-- <a class="navbar-brand sticky_logo" href="{{url('/')}}"><img src="{{asset('theme/img/6-logo/logo2.png')}}" alt="logo" style="max-width: 200px;"><img src="{{asset('theme/img/6-logo/logo2.png')}}" alt="logo" style="max-width: 120px;"></a> --}}
+        <a href="{{url('/')}}" class="navbar-brand"><H4>CABAÑA <br> LA ASUNCIÓN</H4></a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="menu_toggle">
                     <span class="hamburger">
@@ -30,7 +31,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{route('nosotros')}}">
-                           Cabaña
+                           Nosotros
                         </a>
                     </li>
                     <li class="nav-item dropdown">

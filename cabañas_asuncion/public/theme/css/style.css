@@ -2639,12 +2639,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .saas_home_area {
   position: relative;
   background: #fafafe;
-  height: 1100px;
+  padding-bottom: 30px;
 }
 
-.banner_top {
-  padding-top: 210px;
-}
 .banner_top h2 {
   color: #510202;
   margin-bottom: 25px;
@@ -9682,9 +9679,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 /*================= app_screenshot_area css =============*/
 /*=============== get started area css ===============*/
 .get_started_area {
-  background-image: -moz-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: -webkit-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: -ms-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
+  background-image: -moz-linear-gradient(140deg, #510202 0%, #9E785D 100%);
+  background-image: -webkit-linear-gradient(140deg, #510202 0%, #9E785D 100%);
+  background-image: -ms-linear-gradient(140deg, #510202 0%, #9E785D 100%);
   padding: 120px 0px 80px;
   position: relative;
   overflow: hidden;
@@ -15618,7 +15615,7 @@ a .h_head:hover {
 
 .h_footer_dark {
   background: #999999;
-  padding: 100px 0px 120px;
+  padding: 100px 0px 40px;
 }
 .h_footer_dark .company_widget p {
   font-size: 16px;
@@ -18619,7 +18616,7 @@ a .h_head:hover {
 .h_analytices_features_item.flex-row-reverse .h_security_img:before {
   left: auto;
   right: 20px;
-  background: #edb4cb;
+  background: #510202;
 }
 .h_analytices_features_item.flex-row-reverse .h_security_img img {
   box-shadow: 15px 25.981px 60px 0px rgba(1, 1, 64, 0.14);
@@ -18636,7 +18633,7 @@ a .h_head:hover {
   top: 60px;
   bottom: 60px;
   left: 20px;
-  background: #b1ceeb;
+  background: #510202;
   z-index: -1;
 }
 .h_security_img img {
@@ -19118,7 +19115,7 @@ a .h_head:hover {
 }
 
 .event_promotion_area {
-  padding-top: 266px;
+  padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
   z-index: 0;
