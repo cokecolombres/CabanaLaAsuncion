@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<<<<<<< HEAD
     <section class="breadcrumb_area">
         <div class="container">
             <div class="breadcrumb_content text-center">
@@ -83,4 +84,19 @@
     </section>            
 
     @include('layouts.particals.footer')
+=======
+<section class="event_banner_area">
+    <div class="parallax-effect" style="background: url({{asset('theme/img/1-portadas/3.png')}});"></div>
+    <div class="container">
+        
+    </div>
+</section>
+
+<section class="more_feature_area mb_40">
+    <div class="container">
+    </div>
+<section
+
+@include('layouts.particals.footer')
+>>>>>>> 020665f59de3dc91e26eac3579f51c70cab22ce7
 @endsection

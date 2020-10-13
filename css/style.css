@@ -15618,7 +15618,7 @@ a .h_head:hover {
 
 .h_footer_dark {
   background: #010e28;
-  padding: 100px 0px 120px;
+  padding: 100px 0px 0px;
 }
 .h_footer_dark .company_widget p {
   font-size: 16px;
